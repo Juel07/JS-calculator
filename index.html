@@ -12,27 +12,29 @@
 
     <div class="calc-grid">
       <div class="output">
-        <div class="previous-operand">123+</div>
-        <div class="current-operand">456</div>
+<!-- using data attributes instead of classes to select these elements in JavaScript -->
+        <div class="previous-operand" data-prev-operand></div>
+        <div class="current-operand" data-curr-operand></div>
       </div>
-      <div class="btn span-two">AC</div>
-      <div class="btn">DEL</div>
-      <div class="btn">÷</div>
-      <div class="btn">1</div>
-      <div class="btn">2</div>
-      <div class="btn">3</div>
-      <div class="btn">x</div>
-      <div class="btn">4</div>
-      <div class="btn">5</div>
-      <div class="btn">6</div>
-      <div class="btn">−</div>
-      <div class="btn">7</div>
-      <div class="btn">8</div>
-      <div class="btn">9</div>
-      <div class="btn">+</div>
-      <div class="btn">.</div>
-      <div class="btn">0</div>
-      <div class="btn span-two">=</div>
+      
+      <div class="btn span-two" data-all-clear>AC</div>
+      <div class="btn" data-delete>DEL</div>
+      <div class="btn" data-operation>÷</div>
+      <div class="btn" data-number>1</div>
+      <div class="btn" data-number>2</div>
+      <div class="btn" data-number>3</div>
+      <div class="btn" data-operation>x</div>
+      <div class="btn" data-number>4</div>
+      <div class="btn" data-number>5</div>
+      <div class="btn" data-number>6</div>
+      <div class="btn" data-operation>−</div>
+      <div class="btn" data-number>7</div>
+      <div class="btn" data-number>8</div>
+      <div class="btn" data-number>9</div>
+      <div class="btn" data-operation>+</div>
+      <div class="btn" data-number>.</div>
+      <div class="btn" data-number>0</div>
+      <div class="btn span-two" data-equals>=</div>
     </div>
   </body>
 </html>
