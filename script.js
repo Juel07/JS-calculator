@@ -10,3 +10,37 @@ const currentOperandTextElement = document.querySelector('[data-curr-operand]')
 //how to store all the elements for the calc? use a class, that will take all inputs and functions for the
 //calculator
 
+class Calculator {
+    constructor(previousOperandTextElement, currentOperandTextElement) {
+        // set variables for this class
+        this.previousOperandTextElement = previousOperandTextElement
+        this.currentOperandTextElement = currentOperandTextElement
+    }
+
+    // define all operations for our calculator class
+    clear() {
+
+    }
+
+    delete() {
+
+    }
+
+    appendNumber(number) {
+
+    }
+
+    chooseOperation(operation) {
+
+    }
+
+    compute() {
+
+    }
+
+    updateDisplay() {
+
+    }
+
+
+}
