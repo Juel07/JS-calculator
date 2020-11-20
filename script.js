@@ -22,7 +22,7 @@ class Calculator {
     // define all operations for our calculator class
 
     clear() {
-        //defin the following variables; clear the inputs and set them to default values; 
+        //define the following variables; clear the inputs and set them to default values; 
         this.currentOperand = ""
         this.previousOperand = ""
         //operation is undefined since they don't have any operation selected if we clear things
@@ -49,5 +49,14 @@ class Calculator {
 
     }
 
-
 }
+
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
+// add a event listener for each button, add the number and update the final display
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
