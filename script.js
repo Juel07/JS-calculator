@@ -34,7 +34,8 @@ class Calculator {
     }
 
     appendNumber(number) {
-
+        //checks if more than one "." exists, and stops executing the function
+        if (number = "." && this.currentOperand.includes('.')) return
     }
 
     chooseOperation(operation) {
@@ -53,7 +54,7 @@ class Calculator {
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
-// add a event listener for each button, add the number and update the final display
+// add a event listener for each button, pass the text of the number we are choosing & update the final display
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText)
