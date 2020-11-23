@@ -7,8 +7,7 @@ const allClearButton = document.querySelector('[data-all-clear]')
 const previousOperandTextElement = document.querySelector('[data-prev-operand]')
 const currentOperandTextElement = document.querySelector('[data-curr-operand]')
 
-//how to store all the elements for the calc? use a class, that will take all inputs and functions for the
-//calculator
+//how to store all the elements for the calc? use a class, that will take all inputs and functions for the calculator
 
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
