@@ -30,7 +30,7 @@ h5 {
   /* take 100% of the viewport height */
   min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
-  /* minmax- to set min height; auto: to grow as large as it needs*/
+  /* minmax - to set min height; auto: to grow as large as it needs*/
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
@@ -56,8 +56,8 @@ h5 {
   grid-column: span 2;
 }
 
-/* 1 is first col and -1 is last col */
 .output {
+  /* 1 is first col and -1 is last col */
   grid-column: 1 / -1;
   background-color: rgba(0, 0, 0, .7);
   display: flex;
