@@ -35,6 +35,9 @@ class Calculator {
     appendNumber(number) {
         //checks if more than one "." exists, and stops executing the function
         if (number = "." && this.currentOperand.includes('.')) return
+        // convert to a string, so JS appends the numbers and does not add them
+        //so if 1 is clicked twice -> should result in 11 and not 1+1=2
+        this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation) {
@@ -46,7 +49,7 @@ class Calculator {
     }
 
     updateDisplay() {
-
+        this.currentOperandTextElement.innerText = this.currentOperand
     }
 
 }
