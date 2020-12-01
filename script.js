@@ -11,7 +11,7 @@ const currentOperandTextElement = document.querySelector('[data-curr-operand]')
 
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
-        // set variables for this class
+        //set variables for this class
         this.previousOperandTextElement = previousOperandTextElement
         this.currentOperandTextElement = currentOperandTextElement
         //call this function as soon as we create the calculator
@@ -41,7 +41,12 @@ class Calculator {
     }
 
     chooseOperation(operation) {
-
+        // set the operation we passed
+        this.operation = operation
+        // after typing the current op, recycle to the previous operand
+        this.previousOperand = this.currentOperand
+        //clearing out the current value, allowing to type the new value
+        this.currentOperand = ''
     }
 
     compute() {
@@ -50,6 +55,7 @@ class Calculator {
 
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.currentOperand
+        this.previousOperandTextElement.innerText = this.previousOperand
     }
 
 }
