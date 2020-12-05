@@ -34,13 +34,19 @@ class Calculator {
 
     appendNumber(number) {
         //checks if more than one "." exists, and stops executing the function
-        if (number = "." && this.currentOperand.includes('.')) return
+        if (number === "." && this.currentOperand.includes('.')) return
         // convert to a string, so JS appends the numbers and does not add them
         //so if 1 is clicked twice -> should result in 11 and not 1+1=2
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation) {
+        //if the current input is empty, stops execution of the following code
+        if (this.currentOperand === "") return
+        //includes the previous inputs if any, and computes it together with new inputs
+        if (this.previousOperand !== "") {
+            this.compute()
+        }
         // set the operation we passed
         this.operation = operation
         // after typing the current op, recycle to the previous operand
