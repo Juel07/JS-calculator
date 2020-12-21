@@ -105,3 +105,9 @@ equalsButton.addEventListener("click", button => {
     calculator.compute()
     calculator.updateDisplay()
 })
+
+//clear: AC
+allClearButton.addEventListener("click", button => {
+    calculator.clear()
+    calculator.updateDisplay()
+})
