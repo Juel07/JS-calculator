@@ -29,7 +29,8 @@ class Calculator {
     }
 
     delete() {
-
+        //delete everything from first to last character/number
+        this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
     appendNumber(number) {
@@ -101,13 +102,20 @@ numberButtons.forEach(button => {
     })
 })
 
+//equal to button
 equalsButton.addEventListener("click", button => {
     calculator.compute()
     calculator.updateDisplay()
 })
 
-//clear: AC
+//clear: AC button
 allClearButton.addEventListener("click", button => {
     calculator.clear()
+    calculator.updateDisplay()
+})
+
+//delete button
+deleteButton.addEventListener("click", button => {
+    calculator.delete()
     calculator.updateDisplay()
 })
