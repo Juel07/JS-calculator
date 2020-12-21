@@ -56,10 +56,32 @@ class Calculator {
     }
 
     compute() {
+        //create a variable which is the result of the compute function
         let computation
         const prev = parseFloat(this.previousOperand)
         const current = parseFloat(this.currentOperand)
+        //if the user does not enter anything we don't want the code to run
+        //so if we have no previous or current value then just return, cancelling the function completely
         if (isNaN(prev) || isNaN(current)) return
+        switch (this.operation) {
+            case '+':
+                computation = prev + current
+                break;
+            case '-':
+                computation = prev - current
+                break;
+            case '*':
+                computation = prev * current
+                break;
+            case '÷':
+                computation = prev / current
+                break;
+            default:
+                return
+        }
+        this.currentOperand = computation
+        this.operation = undefined
+        this.previousOperand = ''
     }
 
     updateDisplay() {
