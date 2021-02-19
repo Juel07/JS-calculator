@@ -1,4 +1,4 @@
-// select the buttons
+// select the buttons using data attributes instead of classes
 const numberButtons = document.querySelectorAll("[data-number]")
 const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equals]')
